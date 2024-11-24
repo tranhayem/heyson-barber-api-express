@@ -1,0 +1,15 @@
+{
+  "name": "heyson-barber-api-express",
+  "type": "module",
+  "version": "1.0.0",
+  "main": "src/server.js",
+  "repository": "https://github.com/tranhayem/heyson-barber-api-express.git",
+  "author": "tranhayem <mailcuathy@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "node ./src/server.js"
+  },
+  "dependencies": {
+    "express": "^4.21.1"
+  }
+}
