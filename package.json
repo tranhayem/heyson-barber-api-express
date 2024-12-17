@@ -6,10 +6,30 @@
   "repository": "https://github.com/tranhayem/heyson-barber-api-express.git",
   "author": "tranhayem <mailcuathy@gmail.com>",
   "license": "MIT",
+  "engines": {
+    "node": "21.7.1"
+  },
   "scripts": {
-    "start": "node ./src/server.js"
+    "lint": "eslint src --report-unused-disable-directives --max-warnings 0",
+    "clean": "rm -rf build && mkdir build",
+    "build-babel": "babel ./src -d ./build/src",
+    "build": "npm run clean && npm run build-babel",
+    "production": "npm run build && node ./build/src/server.js",
+    "dev": "nodemon --exec babel-node ./src/server.js"
   },
   "dependencies": {
+    "@babel/runtime": "^7.26.0",
     "express": "^4.21.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.25.9",
+    "@babel/core": "^7.26.0",
+    "@babel/eslint-parser": "^7.25.9",
+    "@babel/node": "^7.26.0",
+    "@babel/plugin-transform-runtime": "^7.25.9",
+    "@babel/preset-env": "^7.26.0",
+    "babel-plugin-module-resolver": "^5.0.2",
+    "eslint": "^8.47.0",
+    "nodemon": "^3.1.7"
   }
 }

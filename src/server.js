@@ -9,5 +9,6 @@ app.get("/", (request, response) => {
 });
 
 app.listen(port, hostname, () => {
+  /* eslint-disable no-console */
   console.log(`HeySon server đang chạy trên: http://${hostname}:${port}`);
 });
